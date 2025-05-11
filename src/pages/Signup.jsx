@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import api from '../services/api';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import Navbar from '../component/navbar/Navbar';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -54,9 +55,11 @@ const handleSubmit = async (e) => {
 };
 
   return (
+    <>
+    <Navbar />
     <form
       onSubmit={handleSubmit}
-      className="max-w-md mx-auto mt-10 p-6 bg-white shadow-md rounded-lg"
+      className="max-w-md mx-auto  p-6 bg-white shadow-md rounded-lg"
     >
       <h2 className="text-2xl font-semibold text-center mb-6">Register</h2>
 
@@ -117,7 +120,12 @@ const handleSubmit = async (e) => {
       >
         Register
       </button>
+      <div className="flex items-center gap-x-2 py-3 justify-end text-sm">
+          <p>You have already account</p>
+        <Link to="/login" className="text-blue-700 font-bold">Login</Link>
+        </div>
     </form>
+    </>
   );
 };
 
