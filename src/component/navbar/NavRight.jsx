@@ -1,20 +1,29 @@
-import React from 'react'
-import Icon from '../../assets/icon/Icon'
-
+import React from 'react';
+import Logout_btn from '../button/Logout_btn';
+import { isAuthenticated } from '../../../auth';
+import { useNavigate } from 'react-router-dom';
 
 const NavRight = () => {
-    return (
-        <>
+  const navigate = useNavigate();
 
-            <p className='px-3 py-2 border'>+8801386756656</p>
+  return (
+    <>
+      <p className='px-3 py-2 border'>+8801386756656</p>
 
-            <div className='flex gap-x-4 items-center *:cursor-pointer'>
-                <Icon icon="fab fa-facebook" className="text-blue-600" />
-                <Icon icon="fab fa-twitter" className="text-blue-600" />
-                <Icon icon="fab fa-instagram" className="text-red-600" />
-            </div>
-        </>
-    )
-}
+      <div className='flex gap-x-4 items-center *:cursor-pointer'>
+        {isAuthenticated() ? (
+          <Logout_btn text="Log Out" className="text-sm font-medium bg-gray-400 rounded-md" />
+        ) : (
+          <button
+            onClick={() => navigate('/login/')}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
+          >
+            Login
+          </button>
+        )}
+      </div>
+    </>
+  );
+};
 
-export default NavRight
+export default NavRight;
