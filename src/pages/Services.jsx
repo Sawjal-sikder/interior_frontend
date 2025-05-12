@@ -5,12 +5,12 @@ const Services = () => {
     const [data] = useFetch("home/service/");
 
     return (
-        <div className="bg-gray-600 pt-4 pb-6 py-10 px-4">
+        <div className="bg-white pt-4 pb-6 py-10 px-4">
             <div className="text-center font-medium py-10">
-                <p className="text-4xl text-white">Services</p>
+                <p className="text-4xl text-lime-950">Services</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:px-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:px-6">
                 {data && data.length > 0 ? (
                     data.map((item, index) => (
                         <div key={index} className="bg-white hover:bg-gray-200 rounded-lg overflow-hidden shadow-md p-6">

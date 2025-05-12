@@ -24,11 +24,11 @@ const Portfolio = () => {
 
 
             {/* See More Button */}
-            <div className="flex justify-center mt-10">
+            {/* <div className="flex justify-center mt-10">
                 <a href="/portfolio" className="bg-[#696D6C] text-white px-6 py-3 rounded-full hover:bg-black transition">
                     See More Portfolio
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 }

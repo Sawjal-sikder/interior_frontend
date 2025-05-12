@@ -25,14 +25,14 @@ const Products = () => {
 
 
             {/* See More Button */}
-            <div className="flex justify-center mt-10">
+            {/* <div className="flex justify-center mt-10">
                 <a
                     href="/products"
                     className="bg-[#696D6C] text-white px-6 py-3 rounded-full hover:bg-black transition"
                 >
                     See More Products
                 </a>
-            </div>
+            </div> */}
         </div>
     );
 };
