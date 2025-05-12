@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import Navbar from '../component/navbar/Navbar';
 
 const Register = () => {
+
   const navigate = useNavigate();
   const [form, setForm] = useState({
     username: '',
