@@ -21,7 +21,6 @@ export const isSuperUser = () => {
 
   try {
     const decoded = jwtDecode(token);
-    console.log(decoded); // ✅ Should show is_superuser: true/false
     return decoded.is_superuser === true;
   } catch (err) {
     console.error("Invalid token:", err);
